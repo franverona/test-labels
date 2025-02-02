@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a bug to help us improve
+title: "[BUG]: "
+labels:
+  - bug
+  - ${{ if eq .priority "P1 (Critical - Immediate attention required)" }}P1
+  - ${{ if eq .priority "P2 (High - Important but not blocking)" }}P2
+  - ${{ if eq .priority "P3 (Normal - Should be addressed in due course)" }}P3
+assignees:
+  - ''
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: "Select the priority level of this bug"
+      options:
+        - P1 (Critical - Immediate attention required)
+        - P2 (High - Important but not blocking)
+        - P3 (Normal - Should be addressed in due course)
+      default: 1
+    validations:
+      required: true
+
+  - type: input
+    id: account
+    attributes:
+      label: "Account code"
+      description: "The account code where the error was detected"
+      placeholder: "Account code"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description of the bug"
+      description: "Describe the bug and the steps to reproduce"
+      placeholder: "Description"
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior"
+      description: "What you expected to happen"
+      placeholder: "A clear and concise description of what you expected to happen"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: "If applicable, add screenshots to help explain your problem"
