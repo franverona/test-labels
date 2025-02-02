@@ -10,8 +10,13 @@ permissions:
 jobs:
   triage:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: github/issue-labeler@v3.4
+    - name: 'Checkout'
+      uses: actions/checkout@v4
+
+    - name: 'Tag issue'
+      uses: github/issue-labeler@v3.4
       with:
         configuration-path: .github/labeler.yml
         enable-versioned-regex: 0
