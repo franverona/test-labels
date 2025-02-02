@@ -1,6 +1,6 @@
 P1:
-    - 'P1 (Critical - Immediate attention required)'
+    - 'Critical - Immediate attention required'
 P2:
-    - 'P2 (High - Important but not blocking)'
+    - 'High - Important but not blocking'
 P3:
-    - 'P3 (Normal - Should be addressed in due course)'
+    - 'Normal - Should be addressed in due course'
