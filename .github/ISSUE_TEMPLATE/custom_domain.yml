@@ -1,0 +1,22 @@
+name: Custom domain
+description: Request a custom domain for an account
+title: "[Domain]: <type the domain here>"
+labels:
+  - custom-domain
+projects: ["MOGU-Platform/2"]
+assignees:
+  - ''
+body:
+  - type: input
+    id: account
+    attributes:
+      label: "Account code"
+      description: "The account code requesting the domain"
+      placeholder: "acc_..."
+
+  - type: input
+    id: domain
+    attributes:
+      label: "Domain"
+      description: "Requested domain"
+
